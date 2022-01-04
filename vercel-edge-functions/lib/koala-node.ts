@@ -3,6 +3,7 @@ export const PROJECT = "koala";
 
 interface FetchProfileParams {
   id?: string;
+  email?: string;
   ip?: string;
   referrer?: string;
   userAgent?: string;
@@ -19,6 +20,7 @@ export async function fetchProfile(params: FetchProfileParams) {
         "x-forwarded-for": params.ip!,
       },
       body: JSON.stringify({
+        email: params.email,
         profile_id: params.id,
         // only send a new start time if we don't have an id yet
         start_time: params.id ? undefined : new Date(),

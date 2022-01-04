@@ -14,6 +14,7 @@ export default async function middleware(
 
   const profile = await fetchProfile({
     id,
+    email: "matthew.shwery@segment.com",
     ip: request.ip,
     referrer: request.headers.get("Referer") ?? undefined,
     userAgent: request.ua?.ua ?? undefined,
@@ -25,16 +26,17 @@ export default async function middleware(
   });
 
   const isStartup =
-    profileApi.company.foundedYear.greaterThan(2011) &&
+    profileApi.company.foundedYear.greaterThan(2010) &&
     profileApi.company.amountRaised.lessThan(50000000);
 
-  const isSegment = profileApi.company.name.is("Segment");
+  const hasMoreThan250Employees =
+    profileApi.company.employeeCount.greaterThan(250);
 
   const response = new NextResponse(
     JSON.stringify({
       id: profile.id,
       isStartup,
-      isSegment,
+      hasMoreThan250Employees,
       qualification: profile.q,
     })
   );
