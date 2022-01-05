@@ -4,7 +4,7 @@ import {
   type NextRequest,
 } from "next/server";
 import { KOALA_ID_COOKIE_NAME, fetchProfile } from "../lib/koala-node";
-import { build } from "../../../edge-api-client";
+import { build } from '@koala-live/edge-api-client';
 
 export default async function middleware(
   request: NextRequest,
@@ -25,18 +25,11 @@ export default async function middleware(
     sessionStart: new Date(),
   });
 
-  const isStartup =
-    profileApi.company.foundedYear.greaterThan(2010) &&
-    profileApi.company.amountRaised.lessThan(50000000);
-
-  const hasMoreThan250Employees =
-    profileApi.company.employeeCount.greaterThan(250);
-
   const response = new NextResponse(
     JSON.stringify({
       id: profile.id,
-      isStartup,
-      hasMoreThan250Employees,
+      isB2B: profileApi.company.isB2B(),
+      moreThan250Employees: profileApi.company.employeeCount.greaterThan(250),
       qualification: profile.q,
     })
   );
