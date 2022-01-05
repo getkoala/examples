@@ -1,23 +1,16 @@
-import {
-  NextResponse,
-  type NextFetchEvent,
-  type NextRequest,
-} from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { KOALA_ID_COOKIE_NAME, fetchProfile } from "../lib/koala-node";
-import { build } from '@koala-live/edge-api-client';
+import { build } from "@koala-live/edge-api-client";
 
-export default async function middleware(
-  request: NextRequest,
-  event: NextFetchEvent
-) {
+export default async function middleware(request: NextRequest) {
   const id = request.cookies[KOALA_ID_COOKIE_NAME];
 
   const profile = await fetchProfile({
     id,
     email: "matthew.shwery@segment.com",
     ip: request.ip,
-    referrer: request.headers.get("Referer") ?? undefined,
-    userAgent: request.ua?.ua ?? undefined,
+    referrer: request.headers.get("Referer"),
+    userAgent: request.ua?.ua,
   });
 
   const profileApi = build({
