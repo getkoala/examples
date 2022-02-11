@@ -1,0 +1,15 @@
+{
+  "name": "split-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Netto Farah",
+  "license": "MIT",
+  "dependencies": {
+    "@koala-live/crc32": "^0.1.1",
+    "@koala-live/edge-api-client": "^0.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.4"
+  }
+}
