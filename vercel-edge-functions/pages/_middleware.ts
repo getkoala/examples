@@ -1,22 +1,19 @@
+import { build } from "@getkoala/edge-api-client";
 import { NextResponse, type NextRequest } from "next/server";
-import { KOALA_ID_COOKIE_NAME, fetchProfile } from "../lib/koala-node";
-import { build } from "@koala-live/edge-api-client";
+import { fetchProfile, KOALA_ID_COOKIE_NAME } from "../lib/koala-node";
 
 export default async function middleware(request: NextRequest) {
   const id = request.cookies[KOALA_ID_COOKIE_NAME];
 
   const profile = await fetchProfile({
     id,
-    email: "matthew.shwery@segment.com",
+    email: "matt@getkoala.com",
     ip: request.ip,
     referrer: request.headers.get("Referer"),
     userAgent: request.ua?.ua,
   });
 
-  const profileApi = build({
-    ...profile.a,
-    sessionStart: new Date(),
-  });
+  const profileApi = build(profile.a);
 
   const response = new NextResponse(
     JSON.stringify({
@@ -27,6 +24,7 @@ export default async function middleware(request: NextRequest) {
     })
   );
 
+  // Set or update the Koala cookie
   if (!id || id !== profile.id) {
     response.cookie(KOALA_ID_COOKIE_NAME, profile.id);
   }

@@ -80,6 +80,19 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@getkoala/edge-api-client@^0.4.2":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/edge-api-client/-/edge-api-client-0.8.0.tgz#5a1a27ce00c073c45adf08b850fcf0b2842f7b65"
+  integrity sha512-NxILGw6pEJ67g/BGE0jMMK9rhVMdu/Kf3JdHDs3knXYMo4/SES9hFNbdBh9NZmtUlOO3CGqathhQPJXe0B/gpQ==
+  dependencies:
+    "@getkoala/js-bloom" "0.1.1"
+    flattie "^1.1.0"
+
+"@getkoala/js-bloom@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@getkoala/js-bloom/-/js-bloom-0.1.1.tgz#45afbd10695f6c0c28caab744b6ef35143e620bf"
+  integrity sha512-SJVuY1cHwZHJmrl4dYc72pNi1aR8a0HsGJw3cT4ziyV5KXwYy83HcR/YiVX2qer8Z9Ak+rp79zzz9oa22klkLQ==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -113,20 +126,6 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
-
-"@koala-live/edge-api-client@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@koala-live/edge-api-client/-/edge-api-client-0.4.2.tgz#e2256b4cf8fd3bc1177824af00132eba2d592f8c"
-  integrity sha512-bOu6aL+VFNtIkykELjIZq1AK5G1WHVXT3DHwCL2BUfyCLaSJdXpur7whHC8GtfvRKrdqoE+AhogGqo4ymci/HA==
-  dependencies:
-    "@koala-live/js-bloom" "0.1.1"
-    dayjs "^1.10.7"
-    flattie "^1.1.0"
-
-"@koala-live/js-bloom@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@koala-live/js-bloom/-/js-bloom-0.1.1.tgz#c92b71fc8f6203258d764cfd62ce30fc763c525b"
-  integrity sha512-ihfPeXEulIk/O6L5HCquU0Y+nJUIW1HJDLlck92fafqbDgTzhGP0VgrJw1sYSLTNhn5yoyHwVMFliqyw1pgZ9w==
 
 "@napi-rs/triples@1.0.3":
   version "1.0.3"
@@ -969,11 +968,6 @@ data-uri-to-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
   integrity sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==
-
-dayjs@^1.10.7:
-  version "1.10.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
-  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
 
 debug@2, debug@^2.6.9:
   version "2.6.9"

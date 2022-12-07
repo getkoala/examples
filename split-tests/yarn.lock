@@ -2,34 +2,28 @@
 # yarn lockfile v1
 
 
-"@koala-live/crc32@^0.1.1":
+"@getkoala/crc32@^0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@koala-live/crc32/-/crc32-0.1.1.tgz#ea3bbc3c591fe164efc8083542509d213e479223"
-  integrity sha512-cA0S2hPZpVGZxYfYP4r/0+jgcpXHTn7pP56OBcGe/FgfWaPxj3RBH4FdRoFNxZuF7mapE/bBzyICF6fcB3RghA==
+  resolved "https://registry.yarnpkg.com/@getkoala/crc32/-/crc32-0.1.1.tgz#a2684773b10fafadd4c5c2546c7b23056fcb4a5f"
+  integrity sha512-XDoWaxBrZHAWc8+TcDe0IF/23AHiEfyMC38RwYy+x3a4fHsZU99tS30z+Ws1Oyi2Cp8Uvj+RgFMERaFD2CUI7A==
 
-"@koala-live/edge-api-client@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@koala-live/edge-api-client/-/edge-api-client-0.5.0.tgz#2fc276934115b0790b42ecf019d518c256c14f47"
-  integrity sha512-Tzki8JXWrBdRuPLYFIBn4oKkdgj2q48C1pVjb5/IHEWSnOBEEyHFY2Xp8MAH5LGVQ0xb5VWK2cT92jrfnHsC4A==
+"@getkoala/edge-api-client@^0.5.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/edge-api-client/-/edge-api-client-0.8.0.tgz#5a1a27ce00c073c45adf08b850fcf0b2842f7b65"
+  integrity sha512-NxILGw6pEJ67g/BGE0jMMK9rhVMdu/Kf3JdHDs3knXYMo4/SES9hFNbdBh9NZmtUlOO3CGqathhQPJXe0B/gpQ==
   dependencies:
-    "@koala-live/js-bloom" "0.1.1"
-    dayjs "^1.10.7"
+    "@getkoala/js-bloom" "0.1.1"
     flattie "^1.1.0"
 
-"@koala-live/js-bloom@0.1.1":
+"@getkoala/js-bloom@0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@koala-live/js-bloom/-/js-bloom-0.1.1.tgz#c92b71fc8f6203258d764cfd62ce30fc763c525b"
-  integrity sha512-ihfPeXEulIk/O6L5HCquU0Y+nJUIW1HJDLlck92fafqbDgTzhGP0VgrJw1sYSLTNhn5yoyHwVMFliqyw1pgZ9w==
+  resolved "https://registry.yarnpkg.com/@getkoala/js-bloom/-/js-bloom-0.1.1.tgz#45afbd10695f6c0c28caab744b6ef35143e620bf"
+  integrity sha512-SJVuY1cHwZHJmrl4dYc72pNi1aR8a0HsGJw3cT4ziyV5KXwYy83HcR/YiVX2qer8Z9Ak+rp79zzz9oa22klkLQ==
 
 "@types/uuid@^8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.4.tgz#bd86a43617df0594787d38b735f55c805becf1bc"
   integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
-
-dayjs@^1.10.7:
-  version "1.10.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
-  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
 
 flattie@^1.1.0:
   version "1.1.0"

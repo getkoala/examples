@@ -1,5 +1,5 @@
 export const KOALA_ID_COOKIE_NAME = "ko_id";
-export const PROJECT = "koala";
+export const PROJECT = "<your workspace slug>";
 
 interface FetchProfileParams {
   id?: string;
@@ -11,7 +11,7 @@ interface FetchProfileParams {
 
 export async function fetchProfile(params: FetchProfileParams) {
   const response = await fetch(
-    `http://localhost:3000/web/projects/${PROJECT}/profiles`,
+    `https://api.getkoala.com/web/projects/${PROJECT}/profiles`,
     {
       method: "POST",
       headers: {
@@ -22,9 +22,8 @@ export async function fetchProfile(params: FetchProfileParams) {
       body: JSON.stringify({
         email: params.email,
         profile_id: params.id,
+        ip: params.ip,
         referrer: params.referrer ?? undefined,
-        // only send a new start time if we don't have an id yet
-        start_time: params.id ? undefined : new Date(),
       }),
     }
   );
